@@ -1,6 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Xml;
+using System.Xml.Schema;
 using System.Xml.Serialization;
+using Macrix_Application.Model.Common;
 using Macrix_Application.Model.Interfaces;
 
 namespace Macrix_Application.Model
@@ -9,7 +12,7 @@ namespace Macrix_Application.Model
     public class Person : IPerson, INotifyPropertyChanged
     {
         #region Properties
-        [XmlAttribute("First Name")]
+        [XmlElement("First_Name")]
         public string FirstName
         {
             get { return _firstName; }
@@ -20,7 +23,7 @@ namespace Macrix_Application.Model
             }
         }
 
-        [XmlAttribute("Last Name")]
+        [XmlElement("Last_Name")]
         public string LastName
         {
             get { return _lastName; }
@@ -31,6 +34,7 @@ namespace Macrix_Application.Model
             }
         }
 
+        [XmlElement("Street_Name")]
         public string StreetName
         {
             get { return _streetName; }
@@ -41,6 +45,7 @@ namespace Macrix_Application.Model
             }
         }
 
+        [XmlElement("House_Number")]
         public int HouseNumber
         {
             get { return _houseNumber; }
@@ -51,6 +56,7 @@ namespace Macrix_Application.Model
             }
         }
 
+        [XmlElement("Apartment_Number", IsNullable = true)]
         public int? ApartmentNumber
         {
             get { return _apartmentNumber; }
@@ -61,6 +67,7 @@ namespace Macrix_Application.Model
             }
         }
 
+        [XmlElement("Postal_Code")]
         public string PostalCode
         {
             get { return _postalCode; }
@@ -71,6 +78,7 @@ namespace Macrix_Application.Model
             }
         }
 
+        [XmlElement("Town")]
         public string Town
         {
             get { return _town; }
@@ -81,6 +89,7 @@ namespace Macrix_Application.Model
             }
         }
 
+        [XmlElement("Phone_Number")]
         public string PhoneNumber
         {
             get { return _phoneNumber; }
@@ -91,6 +100,7 @@ namespace Macrix_Application.Model
             }
         }
 
+        [XmlElement("Date_Of_sBirth")]
         public DateTime DateOfBirth
         {
             get { return _dateOfBirth; }
@@ -102,6 +112,7 @@ namespace Macrix_Application.Model
             }
         }
 
+        [XmlElement("Age")]
         public string Age
         {
             get 

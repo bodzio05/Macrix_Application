@@ -71,7 +71,6 @@ namespace Macrix_Application.ViewModel
         }
         #endregion
 
-
         #region Private_Methods
         private void InitXmlFile()
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Macrix_Application.Model.Common;
+using System;
 
 namespace Macrix_Application.Model.Interfaces
 {
